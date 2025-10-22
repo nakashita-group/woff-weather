@@ -13,8 +13,12 @@ woff
     }
 
     console.log(woff.getAccessToken() );
-    const profile=woff.getProfile();
-    document.getElementById("acessToken").innerText=profile.displayName;
+    
+    woff.getProfile()
+      .then((profile) => {
+        console.log("プロフィール情報:", profile);
+        document.getElementById("accessToken").innerText = profile.displayName;
+      })
     
     console.log(woff.getProfile());
   })
