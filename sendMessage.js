@@ -6,8 +6,8 @@ document.getElementById("sendMessage").addEventListener("click", function () {
     woff.sendMessage({
         content: {
             type: "text", // ← メッセージタイプを必ず指定！
-            text: `${UserName}：${strWorkTime}`, // ← テキスト内容
-        },
+            text: `${UserName}：${strWorkTime}` // ← テキスト内容
+        }
     })
         .then(() => {
             console.log("メッセージ送信完了");
