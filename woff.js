@@ -6,21 +6,22 @@ woff
   .then(() => {
     console.log("初期化完了！！");
 
+    //ログイン情報がない場合ログイン画面表示
     if (!woff.getAccessToken()) {
       console.log("トークンなし → 認可フロー開始");
       woff.login(); // ← これがポイント！
       return;
     }
 
-    console.log(woff.getAccessToken() );
-    
+    console.log(woff.getAccessToken());
+
+    //プロフィール情報取得
     woff.getProfile()
       .then((profile) => {
         console.log("プロフィール情報:", profile);
         document.getElementById("UserName").innerText = profile.displayName;
       })
-    
-    console.log(woff.getProfile());
+
   })
   .catch((err) => {
     // 初期化処理中にエラーが発生した場合
