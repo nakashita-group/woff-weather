@@ -1,6 +1,7 @@
 
 
 document.getElementById("sendMessage").addEventListener("click", function () {
+    document.getElementById("message").value="clicked";
     const UserName = document.getElementById("UserName").innerText;
     let strWorkTime = document.getElementById("StrWorkTime").value;
     woff.sendMessage({
