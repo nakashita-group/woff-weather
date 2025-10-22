@@ -6,9 +6,10 @@ document.getElementById("sendMessage").addEventListener("click", function () {
     const strWorkTime = document.getElementById("StrWorkTime").value;
     const endWorkTime = document.getElementById("EndWorkTime").value;
     const areaName=document.getElementById("name").innerText;
+    const description=document.getElementById("description").innerText;
 
     woff.sendMessage({
-        content: `${UserName}:開始時間${strWorkTime}~終了時間:${endWorkTime}\n${areaName}`
+        content: `${UserName}:開始時間${strWorkTime}~終了時間:${endWorkTime}\n天気:${areaName} ${description}`
     })
         .then(() => {
             console.log("メッセージ送信完了");
