@@ -17,7 +17,7 @@ woff
     woff.getProfile()
       .then((profile) => {
         console.log("プロフィール情報:", profile);
-        document.getElementById("accessToken").innerText = profile.displayName;
+        document.getElementById("acessToken").innerText = profile.displayName;
       })
     
     console.log(woff.getProfile());
