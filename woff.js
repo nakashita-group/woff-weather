@@ -13,7 +13,8 @@ woff
     }
 
     console.log(woff.getAccessToken() );
-    document.getElementById("acessToken").innerText=woff.getProfile().displayName;
+    const profile=woff.getProfile();
+    document.getElementById("acessToken").innerText=profile.displayName;
     
     console.log(woff.getProfile());
   })
