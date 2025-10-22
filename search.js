@@ -6,7 +6,6 @@ document.getElementById("search").addEventListener("click",async()=>{
     
     const resData=fetch(url);
     const weatherData=await (await resData).json();
-    console.log(weatherData)
 
     document.getElementById("name").innerText=weatherData.name;
     document.getElementById("description").innerText=weatherData.weather[0].description;
