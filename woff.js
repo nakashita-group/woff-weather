@@ -15,7 +15,7 @@ woff
     console.log(woff.getAccessToken() );
     document.getElementById("acessToken").innerText=woff.getProfile().displayName;
     
-    // console.log(woff.getProfile());
+    console.log(woff.getProfile());
   })
   .catch((err) => {
     // 初期化処理中にエラーが発生した場合
