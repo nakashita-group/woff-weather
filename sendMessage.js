@@ -4,7 +4,7 @@ document.getElementById("sendMessage").addEventListener("click", function () {
     const UserName = document.getElementById("UserName").innerText;
     let strWorkTime = document.getElementById("StrWorkTime").value;
     woff.sendMessage({
-        content: `${UserName}:${strWorkTime}`
+        content: "Hello、World！"
     })
         .then(() => {
             console.log("メッセージ送信完了");
