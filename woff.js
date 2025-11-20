@@ -1,7 +1,7 @@
 woff
   .init({
     //EndPointURLに初めてリダイレクトされるタイミングで実行
-    woffId: "ZhRmxxurxLzM8K1h_krRGg" // 発行された WOFF ID を指定する
+    woffId: "ZhRmxxurxLzM8K1h_krRGg"
   })
   .then(() => {
     console.log("初期化完了！！");
@@ -9,7 +9,7 @@ woff
     //ログイン情報がない場合ログイン画面表示
     if (!woff.getAccessToken()) {
       console.log("トークンなし → 認可フロー開始");
-      woff.login(); // ← これがポイント！
+      woff.login();
       return;
     }
 
